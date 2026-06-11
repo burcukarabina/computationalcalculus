@@ -1,16 +1,27 @@
+:root {
+    --uw-black: #000000;
+    --uw-gold: #FDD54F;
+    --uw-gold-dark: #E0B000;
+    --uw-math-pink: #E6B3CC;
+    --uw-math-pink-dark: #7A003C;
+    --uw-light-gray: #F7F7F7;
+    --uw-medium-gray: #555555;
+    --uw-white: #FFFFFF;
+}
+
 body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
-    background: #f7f7f7;
+    background: var(--uw-light-gray);
     color: #222;
     line-height: 1.6;
 }
 
 header {
-    background: #000;
-    color: white;
-    padding: 40px 20px;
-    border-bottom: 12px solid #FDD54F;
+    background: linear-gradient(90deg, var(--uw-black) 0%, #111111 78%, var(--uw-gold) 100%);
+    color: var(--uw-white);
+    padding: 48px 20px;
+    border-bottom: 8px solid var(--uw-gold);
 }
 
 .container {
@@ -21,18 +32,27 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2.4rem;
+    font-size: 2.45rem;
+    line-height: 1.15;
 }
 
 .subtitle {
-    color: #FDD54F;
+    color: var(--uw-gold);
     font-size: 1.15rem;
+    font-weight: 800;
+    margin-top: 12px;
+}
+
+.header-note {
     margin-top: 10px;
+    color: #eeeeee;
+    font-size: 1rem;
 }
 
 nav {
-    background: #FDD54F;
+    background: var(--uw-gold);
     font-weight: 800;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 nav .container {
@@ -40,8 +60,8 @@ nav .container {
 }
 
 nav a {
-    color: #000;
-    margin-right: 22px;
+    color: var(--uw-black);
+    margin-right: 24px;
     text-decoration: none;
 }
 
@@ -52,14 +72,15 @@ nav a:hover {
 .intro,
 .activity-card,
 .coming-soon {
-    background: white;
+    background: var(--uw-white);
     padding: 25px;
     border-radius: 14px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.09);
 }
 
 .intro {
     margin-bottom: 35px;
+    border-left: 10px solid var(--uw-gold);
 }
 
 .major-section {
@@ -67,35 +88,43 @@ nav a:hover {
 }
 
 .major-section-title {
-    background: #000;
-    color: white;
-    padding: 14px 18px;
-    border-left: 10px solid #FDD54F;
+    background: var(--uw-black);
+    color: var(--uw-white);
+    padding: 16px 20px;
+    border-left: 12px solid var(--uw-gold);
     border-radius: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .topic-title {
-    margin-top: 30px;
-    border-bottom: 4px solid #FDD54F;
-    padding-bottom: 6px;
+    margin-top: 34px;
+    border-bottom: 4px solid var(--uw-gold);
+    padding-bottom: 8px;
 }
 
 .activity-card {
-    border-left: 8px solid #FDD54F;
-    margin: 20px 0;
+    border-left: 10px solid var(--uw-gold);
+    margin: 22px 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.13);
 }
 
 .activity-card h4 {
     margin-top: 0;
     margin-bottom: 8px;
-    font-size: 1.35rem;
+    font-size: 1.4rem;
 }
 
 .tag {
     display: inline-block;
-    background: #f4c2d7;
-    color: #000;
-    padding: 4px 10px;
+    background: var(--uw-math-pink);
+    color: var(--uw-black);
+    padding: 4px 11px;
     border-radius: 999px;
     font-size: 0.85rem;
     font-weight: 800;
@@ -109,35 +138,37 @@ nav a:hover {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 800;
-}
-
-.view {
-    background: #000;
-    color: white;
-}
-
-.run {
-    background: #FDD54F;
-    color: #000;
-}
-
-.download {
-    background: #f4c2d7;
-    color: #000;
-}
-
-.video {
-    background: #7a003c;
-    color: white;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .button:hover {
-    opacity: 0.85;
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+.view {
+    background: var(--uw-black);
+    color: var(--uw-white);
+}
+
+.run {
+    background: var(--uw-gold);
+    color: var(--uw-black);
+}
+
+.download {
+    background: var(--uw-math-pink);
+    color: var(--uw-black);
+}
+
+.video {
+    background: var(--uw-math-pink-dark);
+    color: var(--uw-white);
 }
 
 .coming-soon {
-    border-left: 8px solid #f4c2d7;
-    margin: 20px 0;
+    border-left: 10px solid var(--uw-math-pink);
+    margin: 22px 0;
 }
 
 .video-container {
@@ -152,9 +183,9 @@ nav a:hover {
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 45px;
     padding: 25px 20px;
     text-align: center;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--uw-medium-gray);
 }
