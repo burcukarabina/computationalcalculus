@@ -2,146 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Computational Calculus Activities</title>
+    <title>Computational Activities for First-Year University Mathematics</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Nunito', sans-serif;
-            background: #f7f7f7;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #000;
-            color: white;
-            padding: 40px 20px;
-            border-bottom: 12px solid #FDD54F;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px 20px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.4rem;
-        }
-
-        .subtitle {
-            color: #FDD54F;
-            font-size: 1.15rem;
-            margin-top: 10px;
-        }
-
-        nav {
-            background: #FDD54F;
-            font-weight: 800;
-        }
-
-        nav .container {
-            padding: 12px 20px;
-        }
-
-        nav a {
-            color: #000;
-            margin-right: 22px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .intro {
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-            margin-bottom: 35px;
-        }
-
-        .section-title {
-            margin-top: 35px;
-            border-bottom: 4px solid #FDD54F;
-            padding-bottom: 6px;
-        }
-
-        .activity-card {
-            background: white;
-            border-left: 8px solid #FDD54F;
-            padding: 22px;
-            margin: 20px 0;
-            border-radius: 14px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-
-        .activity-card h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #f4c2d7;
-            color: #000;
-            padding: 4px 10px;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            font-weight: 800;
-            margin: 0 6px 10px 0;
-        }
-
-        .button {
-            display: inline-block;
-            margin: 8px 8px 0 0;
-            padding: 10px 14px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 800;
-        }
-
-        .view {
-            background: #000;
-            color: white;
-        }
-
-        .run {
-            background: #FDD54F;
-            color: #000;
-        }
-
-        .download {
-            background: #f4c2d7;
-            color: #000;
-        }
-
-        .button:hover {
-            opacity: 0.85;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
     <div class="container">
-        <h1>Computational Calculus Activities</h1>
+        <h1>Computational Activities for First-Year University Mathematics</h1>
         <div class="subtitle">
-            Exploring calculus through computation, visualization, and experimentation
+            Interactive Python-based explorations for Calculus and Linear Algebra
         </div>
     </div>
 </header>
@@ -149,8 +22,8 @@
 <nav>
     <div class="container">
         <a href="#about">About</a>
-        <a href="#sequences">Sequences</a>
-        <a href="#derivatives">Derivatives</a>
+        <a href="#calculus">Calculus</a>
+        <a href="#linear-algebra">Linear Algebra</a>
     </div>
 </nav>
 
@@ -159,80 +32,84 @@
     <section class="intro" id="about">
         <h2>Welcome</h2>
         <p>
-            These activities are designed to help students explore calculus concepts
-            using Python notebooks. You can view each activity as a webpage, run it
-            interactively using Binder, or download the notebook file.
+            These activities are designed to help students explore first-year university
+            mathematics using Python notebooks. You can view each activity as a webpage,
+            run it interactively using Binder, or download the notebook file.
         </p>
     </section>
 
-    <section id="sequences">
-        <h2 class="section-title">🔁 Sequences</h2>
+    <section class="major-section" id="calculus">
+        <h2 class="major-section-title">Calculus</h2>
+
+        <h3 class="topic-title">🔁 Sequences</h3>
 
         <div class="activity-card">
             <span class="tag">MATH 137</span>
-            <span class="tag">Sequences</span>
-            <span class="tag">Python</span>
+            <span class="tag">15–20 min</span>
+            <span class="tag">Beginner</span>
 
-            <h3>Recursive Sequences</h3>
+            <h4>Recursive Sequences</h4>
 
             <p>
                 Explore recursive sequences computationally and visually. Investigate boundedness,
                 monotonicity, and convergence through numerical experiments and coding.
             </p>
 
-            <a class="button view" href="recursivesequences.html">
-                View activity
-            </a>
+            <a class="button view" href="recursivesequences.html">View activity</a>
 
             <a class="button run"
                href="https://mybinder.org/v2/gh/burcukarabina/computationalcalculus/HEAD?urlpath=tree/recursivesequences.ipynb">
                 Run interactively
             </a>
 
-            <a class="button download"
-               href="recursivesequences.ipynb"
-               download>
+            <a class="button download" href="recursivesequences.ipynb" download>
                 Download notebook
             </a>
         </div>
-    </section>
 
-    <section id="derivatives">
-        <h2 class="section-title">📈 Derivatives</h2>
+        <h3 class="topic-title">📈 Derivatives</h3>
 
         <div class="activity-card">
             <span class="tag">MATH 137</span>
-            <span class="tag">Derivatives</span>
-            <span class="tag">Python</span>
+            <span class="tag">15–20 min</span>
+            <span class="tag">Beginner</span>
 
-            <h3>Linear Approximations</h3>
+            <h4>Linear Approximations</h4>
 
             <p>
                 Explore how tangent lines can be used to approximate function values near a point.
                 Compare exact values and approximations using graphical and computational methods.
             </p>
 
-            <a class="button view" href="LinearApproximations.html">
-                View activity
-            </a>
+            <a class="button view" href="LinearApproximations.html">View activity</a>
 
             <a class="button run"
                href="https://mybinder.org/v2/gh/burcukarabina/computationalcalculus/HEAD?urlpath=tree/LinearApproximations.ipynb">
                 Run interactively
             </a>
 
-            <a class="button download"
-               href="LinearApproximations.ipynb"
-               download>
+            <a class="button download" href="LinearApproximations.ipynb" download>
                 Download notebook
             </a>
+        </div>
+    </section>
+
+    <section class="major-section" id="linear-algebra">
+        <h2 class="major-section-title">Linear Algebra</h2>
+
+        <div class="coming-soon">
+            <h3>Coming Soon</h3>
+            <p>
+                Future activities will include systems of equations, matrix operations,
+                linear transformations, eigenvalues, and eigenvectors.
+            </p>
         </div>
     </section>
 
 </main>
 
 <footer>
-    © 2026 Burcu Karabina · University of Waterloo
+    © 2026 Burcu Karabina · University of Waterloo · Department of Mathematics
 </footer>
 
 </body>
