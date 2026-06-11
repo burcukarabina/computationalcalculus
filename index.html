@@ -34,20 +34,23 @@
         }
 
         .subtitle {
+            color: #FDD54F;
             font-size: 1.15rem;
             margin-top: 10px;
-            color: #FDD54F;
         }
 
         nav {
             background: #FDD54F;
+            font-weight: 800;
+        }
+
+        nav .container {
             padding: 12px 20px;
-            font-weight: 700;
         }
 
         nav a {
             color: #000;
-            margin-right: 20px;
+            margin-right: 22px;
             text-decoration: none;
         }
 
@@ -60,6 +63,13 @@
             padding: 25px;
             border-radius: 14px;
             box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            margin-top: 35px;
+            border-bottom: 4px solid #FDD54F;
+            padding-bottom: 6px;
         }
 
         .activity-card {
@@ -73,6 +83,7 @@
 
         .activity-card h3 {
             margin-top: 0;
+            margin-bottom: 8px;
         }
 
         .tag {
@@ -82,8 +93,8 @@
             padding: 4px 10px;
             border-radius: 999px;
             font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-weight: 800;
+            margin: 0 6px 10px 0;
         }
 
         .button {
@@ -110,9 +121,13 @@
             color: #000;
         }
 
+        .button:hover {
+            opacity: 0.85;
+        }
+
         footer {
             margin-top: 40px;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
             font-size: 0.9rem;
             color: #555;
@@ -125,14 +140,17 @@
 <header>
     <div class="container">
         <h1>Computational Calculus Activities</h1>
-        <div class="subtitle">Exploring calculus through computation, visualization, and experimentation</div>
+        <div class="subtitle">
+            Exploring calculus through computation, visualization, and experimentation
+        </div>
     </div>
 </header>
 
 <nav>
     <div class="container">
-        <a href="#activities">Activities</a>
         <a href="#about">About</a>
+        <a href="#sequences">Sequences</a>
+        <a href="#derivatives">Derivatives</a>
     </div>
 </nav>
 
@@ -142,39 +160,73 @@
         <h2>Welcome</h2>
         <p>
             These activities are designed to help students explore calculus concepts
-            using Python notebooks. You can view each activity as a webpage or run it
-            interactively using Binder.
+            using Python notebooks. You can view each activity as a webpage, run it
+            interactively using Binder, or download the notebook file.
         </p>
     </section>
 
-    <section id="activities">
-        <h2>Activities</h2>
+    <section id="sequences">
+        <h2 class="section-title">🔁 Sequences</h2>
 
         <div class="activity-card">
+            <span class="tag">MATH 137</span>
             <span class="tag">Sequences</span>
+            <span class="tag">Python</span>
+
             <h3>Recursive Sequences</h3>
+
             <p>
-                Explore recursive sequences computationally and visually.
+                Explore recursive sequences computationally and visually. Investigate boundedness,
+                monotonicity, and convergence through numerical experiments and coding.
             </p>
 
-            <a class="button view" href="recursivesequences.html">View activity</a>
-            <a class="button run" href="https://mybinder.org/v2/gh/burcukarabina/computationalcalculus/HEAD?urlpath=tree/recursivesequences.ipynb">Run interactively</a>
-            <a class="button download" href="recursivesequences.ipynb">Download notebook</a>
+            <a class="button view" href="recursivesequences.html">
+                View activity
+            </a>
+
+            <a class="button run"
+               href="https://mybinder.org/v2/gh/burcukarabina/computationalcalculus/HEAD?urlpath=tree/recursivesequences.ipynb">
+                Run interactively
+            </a>
+
+            <a class="button download"
+               href="recursivesequences.ipynb"
+               download>
+                Download notebook
+            </a>
         </div>
+    </section>
+
+    <section id="derivatives">
+        <h2 class="section-title">📈 Derivatives</h2>
 
         <div class="activity-card">
-    <span class="tag">Derivatives</span>
-    <h3>Linear Approximations</h3>
-    <p>
-        Explore how tangent lines can be used to approximate function values near a point.
-    </p>
+            <span class="tag">MATH 137</span>
+            <span class="tag">Derivatives</span>
+            <span class="tag">Python</span>
 
-    <a class="button view" href="LinearApproximations.html">View activity</a>
-    <a class="button run" href="https://mybinder.org/v2/gh/burcukarabina/computationalcalculus/HEAD?urlpath=tree/LinearApproximations.ipynb">Run interactively</a>
-    <a class="button download" href="LinearApproximations.ipynb">Download notebook</a>
-</div>
-        
+            <h3>Linear Approximations</h3>
 
+            <p>
+                Explore how tangent lines can be used to approximate function values near a point.
+                Compare exact values and approximations using graphical and computational methods.
+            </p>
+
+            <a class="button view" href="LinearApproximations.html">
+                View activity
+            </a>
+
+            <a class="button run"
+               href="https://mybinder.org/v2/gh/burcukarabina/computationalcalculus/HEAD?urlpath=tree/LinearApproximations.ipynb">
+                Run interactively
+            </a>
+
+            <a class="button download"
+               href="LinearApproximations.ipynb"
+               download>
+                Download notebook
+            </a>
+        </div>
     </section>
 
 </main>
